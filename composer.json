@@ -1,0 +1,38 @@
+{
+	"autoload": {
+		"psr-4": {
+			"IC\\Plugin\\CartLinkWooCommerce\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\Unit\\": "tests/unit/"
+		}
+	},
+	"require": {
+		"php": ">=7.1",
+		"ext-json": "*"
+	},
+	"require-dev": {
+		"php-stubs/wordpress-stubs": "^v5.8.2",
+		"php-stubs/woocommerce-stubs": "v5.9.0",
+		"10up/wp_mock": "^0.4.2",
+		"phpunit/phpunit": "^9.5.10",
+		"wp-cli/wp-cli-bundle": "^v2.5.0",
+		"wp-coding-standards/wpcs": "^2.3.0",
+		"humbug/php-scoper": "^0.15.0",
+		"jetbrains/phpstorm-stubs": "^2020.3"
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"./vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs"
+		],
+		"unit": "./vendor/bin/phpunit --configuration phpunit-unit.xml",
+		"unit-c": "./vendor/bin/phpunit --configuration phpunit-unit.xml --coverage-html .phpunit.cache/code-coverage/",
+		"unit-open": "open .phpunit.cache/code-coverage/index.html",
+		"make-pot": "./vendor/bin/wp i18n make-pot . lang/plugin-slug.pot",
+		"create-zip": "composer install --no-dev && wp dist-archive . ./plugin.zip",
+		"phpcs": "./vendor/bin/phpcs src/ --standard=WordPress",
+		"generate-vendor-prefixed": "./vendor/bin/php-scoper add-prefix --output-dir=./vendor_prefixed -f"
+	}
+}

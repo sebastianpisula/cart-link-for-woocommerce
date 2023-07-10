@@ -1,0 +1,95 @@
+.ic-campaign-container .optional {
+	display: none;
+}
+
+#campaign-products {
+	thead {
+		.column-cb {
+			width: 1% !important;
+			min-width: 20px !important;
+		}
+
+		.column-qty,
+		.column-price {
+			width: 5% !important;
+		}
+
+		.column-price {
+			.woocommerce-help-tip {
+				margin: 0 3px 3px 0;
+			}
+		}
+	}
+
+	tbody {
+		td {
+			padding-top: 15px;
+		}
+
+		.check-column input {
+			margin-top: 12px;
+		}
+	}
+
+	input[type="number"] {
+		margin: 0 !important;
+		max-height: 30px;
+	}
+
+	.button {
+		.dashicons-plus {
+			margin-top: 5px;
+		}
+
+		.dashicons-admin-page {
+			margin-top: 4px;
+		}
+
+		.dashicons-trash {
+			margin-top: 3px;
+		}
+	}
+}
+
+.post-type-ic-campaign {
+	#preview-action {
+		display: none;
+	}
+
+	thead {
+		.column-status {
+			width: 6ch;
+		}
+	}
+
+	tbody {
+		.column-status {
+			.woocommerce-input-toggle {
+				cursor: pointer;
+				margin-top: 10px;
+			}
+		}
+
+		.campaign-url-container {
+			position: relative;
+			margin: 0;
+
+			.button-copy-url {
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 100%;
+			}
+
+			.woocommerce-input-wrapper {
+				display: block;
+
+				.campaign-url {
+					cursor: pointer;
+					margin: 0;
+					padding-left: 6px;
+				}
+			}
+		}
+	}
+}

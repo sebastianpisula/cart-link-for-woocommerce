@@ -1,0 +1,21 @@
+{
+	"name": "ccr",
+	"main": "webpack.mix.js",
+	"dependencies": {
+	},
+	"devDependencies": {
+		"babel-loader": "^8.2.2",
+		"css-loader": "^1.0.1",
+		"mati-mix": "2.0.1",
+		"sass": "^1.32.12",
+		"sass-loader": "^7.3.1",
+		"style-loader": "^0.23.1"
+	},
+	"scripts": {
+		"development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"dev": "npm run development",
+		"watch": "npm run development -- --watch",
+		"prod": "npm run production"
+	}
+}

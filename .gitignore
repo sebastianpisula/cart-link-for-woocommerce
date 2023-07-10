@@ -1,0 +1,5 @@
+/vendor/
+/.phpunit.cache/
+/vendor_prefixed/
+/assets/dist/
+/node_modules/
