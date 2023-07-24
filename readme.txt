@@ -1,10 +1,10 @@
 === Custom Cart Link for WooCommerce ===
 Contributors: sebastianpisula, przemekproszowski, lusp, bartgajewski
 Tags: cart link, custom add to cart link, custom cart link, cart url, link to cart, cart, woocommerce, populate cart, campaign, marketing
-Requires at least: 5.8
-Tested up to: 6.2
+Requires at least: 6.0
+Tested up to: 6.3
 Requires PHP: 7.2
-Stable tag: 1.3.1
+Stable tag: 1.4.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -61,6 +61,10 @@ Optionally, you can also try to upload the plugin zip file using Plugins -> Add 
 
 
 == Changelog ==
+
+= 1.4.0 - 2023-07-24 =
+* Added support for WordPress 6.3
+* Added support for WooCommerce 7.9
 
 = 1.3.1 - 2023-04-09 =
 * Added support for WordPress 6.2

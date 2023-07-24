@@ -2,7 +2,7 @@ jQuery( function ( $ ) {
 	$( document.body ).on( 'click', '.js--add-product-button', function () {
 		let template = wp.template( 'table-row-item' );
 
-		$( '#the-list' ).append( template().replaceAll( '[XXX]', '[' + Date.now() + ']' ) );
+		$( '#campaign-products #the-list' ).append( template().replaceAll( '[XXX]', '[' + Date.now() + ']' ) );
 
 		$( '.no-items' ).remove();
 
@@ -12,8 +12,8 @@ jQuery( function ( $ ) {
 	} ).on( 'click', '.js--delete-selected-products-button', function () {
 		$( '.js--cb-field:checked' ).closest( 'tr' ).remove();
 
-		if ( $( '#the-list tr' ).length === 0 ) {
-			$( '#the-list' ).append( wp.template( 'no-items' )() );
+		if ( $( '#campaign-products #the-list tr' ).length === 0 ) {
+			$( '#campaign-products #the-list' ).append( wp.template( 'no-items' )() );
 		}
 
 		return false;
