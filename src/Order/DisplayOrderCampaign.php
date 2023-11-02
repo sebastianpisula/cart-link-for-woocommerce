@@ -15,13 +15,13 @@ class DisplayOrderCampaign {
 	}
 
 	/**
-	 * @param string       $display_key .
-	 * @param WC_Meta_Data $meta        .
+	 * @param string $display_key .
+	 * @param mixed  $meta        .
 	 *
 	 * @return mixed|string|void
 	 */
-	public function modify_meta_key( $display_key, WC_Meta_Data $meta ) {
-		if ( $meta->key === SaveOrderCampaign::META_CAMPAIGN_ID ) {
+	public function modify_meta_key( $display_key, $meta ) {
+		if ( $meta instanceof WC_Meta_Data && $meta->key === SaveOrderCampaign::META_CAMPAIGN_ID ) {
 			return __( 'Cart Link Campaign', 'cart-link-for-woocommerce' );
 		}
 
@@ -29,13 +29,13 @@ class DisplayOrderCampaign {
 	}
 
 	/**
-	 * @param string       $display_value .
-	 * @param WC_Meta_Data $meta          .
+	 * @param string $display_value .
+	 * @param mixed  $meta          .
 	 *
 	 * @return mixed|string|void
 	 */
-	public function modify_meta_value( $display_value, WC_Meta_Data $meta ) {
-		if ( $meta->key === SaveOrderCampaign::META_CAMPAIGN_ID ) {
+	public function modify_meta_value( $display_value, $meta ) {
+		if ( $meta instanceof WC_Meta_Data && $meta->key === SaveOrderCampaign::META_CAMPAIGN_ID ) {
 			return sprintf( '<a target="_blank" href="%s">%s</a>', esc_url( get_edit_post_link( $meta->value ) ), esc_html( get_the_title( $meta->value ) ) );
 		}
 

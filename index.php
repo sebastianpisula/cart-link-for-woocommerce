@@ -3,15 +3,15 @@
  * Plugin Name: Cart Link for WooCommerce
  * Description: Create, customize and save the direct links adding the predefined products setup to the cart. Share the cart links with your customers, make their carts be automatically filled with the right items and boost your sales in no time!
  * Plugin URI: https://wordpress.org/plugins/cart-link-for-woocommerce/
- * Version: 1.4.0
+ * Version: 1.5.0
  * Author: Sebastian Pisula
  * Author URI: mailto:sebastian.pisula@gmail.com
  * Text Domain: cart-link-for-woocommerce
  * Domain Path: /lang/
- * Requires at least: 6.0
- * Tested up to: 6.3
- * WC requires at least: 7.6
- * WC tested up to: 7.9
+ * Requires at least: 6.1
+ * Tested up to: 6.4
+ * WC requires at least: 8.0
+ * WC tested up to: 8.3
  * Requires PHP: 7.2
  */
 
@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 include __DIR__ . '/vendor/autoload.php';
 
-$plugin_data = new PluginData( __FILE__, 'Cart Link for WooCommerce', '1.4.0', 'cart-link-for-woocommerce', 2 );
+$plugin_data = new PluginData( __FILE__, 'Cart Link for WooCommerce', '1.5.0', 'cart-link-for-woocommerce', 2 );
 
 ( new class( $plugin_data ) {
 
